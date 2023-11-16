@@ -7,9 +7,14 @@ module.exports = {
     "./nuxt.config.{js,ts}",
     "./app.vue",
   ],
-  mode: 'jit',
+  mode: 'jit',  
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'little-black': '#1d1d1f',
+        'link': '#0066cc;',
+      },
+    },
   },
   plugins: [],
 } 
