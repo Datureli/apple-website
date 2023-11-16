@@ -1,7 +1,7 @@
-<template>
-  <div class="flex flex-col items-center">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-      <slot></slot>
+  <template>
+    <div class="flex flex-col items-center">
+      <div class="grid grid-cols-2 md:grid-rows-1 md:grid-cols-4 lg:gap-12 gap-4 mt-8">
+        <slot></slot>
+      </div>
     </div>
-  </div>
-</template>
+  </template>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1
-      class="text-4xl md:text-4xl font-sans font-sf-pro-display text-little-black text-center font-medium mb-4 mt-5 p-5"
+      class="text-4xl md:text-4xl lg:text-6xl mt-8 font-sans font-sf-pro-display text-little-black text-center font-medium mb-4  p-5"
     >
       <slot name="title">Accessibility Support</slot>
     </h1>

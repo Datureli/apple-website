@@ -1,10 +1,18 @@
 <template>
   <section class="mt-8">
-    <h2 class="text-center text-3xl font-medium text-black mb-6">Build-in features</h2>
-    <p class="text-center">
+    <h2 class="text-center text-3xl lg:text-4xl font-medium text-black mb-6">
+      Build-in features
+    </h2>
+    <p class="text-center m-auto pl-8 pr-8 mb-5 md:pl-10 md:pr-10 lg:w-[65%]">
       Add the accessibility features that you use the most, and access them
-      quickly with the Accessibility Shortcut.
+      quickly with the router.<nuxt-link
+        class="text-link hover:underline cursor-pointer"
+        to=""
+      >
+        Accessibility Shortcut</nuxt-link
+      >
     </p>
+
     <FourIconsLayout>
       <FourIcons
         v-for="(icon, index) in icons"
@@ -22,6 +30,10 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
+import { useRoute, useRouter } from "vue-router";
+
+const router = useRouter();
 const icons = [
   {
     imageSrc: "/icons/hand.png",
