@@ -1,23 +1,27 @@
 <template>
-  <div class="flex flex-col items-center">
-    <h1 class="text-4xl md:text-4xl font-sans font-sf-pro-display text-little-black text-center font-medium mb-4 mt-5 p-5">
-      Accessibility Support
+  <div>
+    <h1
+      class="text-4xl md:text-4xl font-sans font-sf-pro-display text-little-black text-center font-medium mb-4 mt-5 p-5"
+    >
+      <slot name="title">Accessibility Support</slot>
     </h1>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-      <router-link v-for="(icon, index) in icons" :key="index" :to="icon.link" class="no-underline text-link hover:underline">
-        <div :class="icon.containerClasses">
-          <img :src="icon.imageSrc" :alt="icon.imageAlt" class="h-12 w-12 mb-2" />
-          <span :class="[icon.textClasses, index % 2 === 1 ? 'md:w-[95%] lg:w-auto' : '']">{{ icon.text + '>' }}</span>
-        </div>
-      </router-link>
-    </div>
+    <FourIconsLayout>
+      <FourIcons
+        v-for="(icon, index) in icons"
+        :key="index"
+        :imageSrc="icon.imageSrc"
+        :imageAlt="icon.imageAlt"
+        :text="icon.text"
+        :containerClasses="icon.containerClasses"
+        :textClasses="icon.textClasses"
+        :link="icon.link"
+        :index="index"
+      ></FourIcons>
+    </FourIconsLayout>
   </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
-import { useRoute } from "vue-router";
-
 const icons = [
   {
     imageSrc: "/images/icon1.svg",
