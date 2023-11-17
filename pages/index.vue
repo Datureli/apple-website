@@ -4,5 +4,6 @@
     <AccessibilitySupport />
     <BuiltInFeatures />
     <ContentBlock />
+    <Resources />
   </div>
 </template>
