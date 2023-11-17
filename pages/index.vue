@@ -5,5 +5,6 @@
     <BuiltInFeatures />
     <ContentBlock />
     <Resources />
+    <TopicSearch />
   </div>
 </template>
