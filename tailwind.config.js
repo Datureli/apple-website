@@ -12,7 +12,8 @@ module.exports = {
     extend: {
       colors: {
         'little-black': '#1d1d1f',
-        'link': '#0066cc;',
+        'link': '#0066cc',
+        'soft-grey': '#515154'
       },
     },
   },

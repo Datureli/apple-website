@@ -6,5 +6,7 @@
     <ContentBlock />
     <Resources />
     <TopicSearch />
+    <AppleContact />
+    <Footer />
   </div>
 </template>
