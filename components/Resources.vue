@@ -1,8 +1,8 @@
 <template>
-  <section class="text-center">
-    <h2 class="text-3xl mt-7 font-bold">Resources</h2>
+  <section>
+    <h2 class="text-3xl mt-7 font-semibold text-center">Resources</h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 mt-10 md:w-[85%] m-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 ml-7 mr-3 mt-10 md:w-[85%] m-auto ">
       <ContentCardItem
         v-for="(item, index) in items"
         :key="index"

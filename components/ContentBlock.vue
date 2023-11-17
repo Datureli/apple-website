@@ -1,11 +1,12 @@
 <template>
-  <section class="grid grid-cols-1 md:grid-cols-2 mt-10 pl-0 pr-0 w-[85%] m-auto">
+  <section
+    class="grid grid-cols-1 md:grid-cols-2 mt-10 pl-0 pr-0 w-[85%] m-auto"
+  >
     <ContentCardItem v-for="(item, index) in items" :key="index" :item="item" />
   </section>
 </template>
 
 <script setup>
-
 const items = [
   {
     imageSrc: "/icons/content-icons/personal-voice.png",
@@ -25,9 +26,3 @@ const items = [
   },
 ];
 </script>
-
-<style scoped>
-.custom-text-title {
-  font-size: 17px;
-}
-</style>

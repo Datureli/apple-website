@@ -1,12 +1,14 @@
 <template>
-  <section class="text-center ">
-    <div class="grid grid-cols-1 md:grid-cols-3 mt-10 md:w-[85%] m-auto">
+  <section class="text-center pb-[100px]">
+    <div
+      class="grid grid-cols-1 ml-7 mr-3 md:grid-cols-3 mt-10 md:w-[85%] m-auto"
+    >
       <ContentCardItem
         v-for="(item, index) in items"
         :key="index"
         :item="item"
       />
-      <h2 class="text-1xl mt-7 text-left pl-15 ">
+      <h2 class="text-1xl mt-7 text-left pl-15">
         * Personal Voice is available in English.
       </h2>
     </div>
@@ -17,25 +19,24 @@
 const items = [
   {
     imageSrc: "/icons/apple-contact/message.png",
-    title: "Braille User Guides",
+    title: "Apple Communities",
     description:
-      "Download a Unified English Braille user guide file (.BRF) for your device: Mac, iPhone, Apple Watch, Apple TV, or HomePod.",
-    linkTitle: "Start a SignTime session",
+      "Find answers, ask questions and connect with other Apple users.",
+    linkTitle: "Ask or search now",
   },
   {
     imageSrc: "/icons/apple-contact/users.png",
-    title: "VoiceOver",
-    description:
-      "With VoiceOver, you can hear what's happening on your screen and navigate with simple gestures. Learn how to use VoiceOver on your iPhone, iPad, or Mac.",
-    linkTitle: "Start a SignTime session",
+    title: "Get Support",
+    description: "We can help you find the best support options.",
+    linkTitle: "Start now",
   },
   {
     imageSrc: "/icons/apple-contact/apple.png",
-    title: "Contact Apple using SignTime",
+    title: "Support app",
     description:
-      "Get help from Apple Support using sign language. You can start a SignTime session to be connected to an interpreter.",
+      "Get personalised access to solutions for your Apple products.",
     link: "/path/to/personal-voice",
-    linkTitle: "Start a SignTime session",
+    linkTitle: "Download the Apple Support app",
   },
 ];
 </script>

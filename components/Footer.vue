@@ -15,7 +15,7 @@
         {{ dropdown.mainTitle }}
       </span>
 
-      <div v-if="dropdown.showLinks" class="mt-2 bg-white text-black shadow-lg">
+      <div v-if="dropdown.showLinks === true" class="mt-2 bg-white text-black shadow-lg">
         <nuxt-link
           v-for="(link, linkIndex) in dropdown.dropdownLinks"
           :key="linkIndex"

@@ -1,8 +1,14 @@
 <template>
   <router-link :to="link" class="no-underline text-link hover:underline">
     <div :class="containerClasses">
-      <img :src="imageSrc" :alt="imageAlt" class="h-12 w-12 mb-2" />
-      <span :class="[textClasses, isOdd ? 'md:w-[95%] lg:w-auto' : '']">{{ text + '>' }}</span>
+      <img :src="imageSrc" :alt="imageAlt" class="w-[60px] h-[60px] mb-2" />
+      <div class="flex items-center justify-center">
+        <span
+          class="whitespace-normal"
+          :class="[textClasses, isOdd ? ' md:w-[95%] lg:w-auto' : '']"
+          >{{ text }}</span
+        >
+      </div>
     </div>
   </router-link>
 </template>
@@ -11,7 +17,14 @@
 import { ref } from "vue";
 import { useRoute } from "vue-router";
 
-const props = defineProps(["imageSrc", "imageAlt", "text", "containerClasses", "textClasses", "link"]);
+const props = defineProps([
+  "imageSrc",
+  "imageAlt",
+  "text",
+  "containerClasses",
+  "textClasses",
+  "link",
+]);
 
 const isOdd = ref(false);
 

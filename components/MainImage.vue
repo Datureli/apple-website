@@ -3,7 +3,7 @@
     <img
       src="../assets/images/image.jpeg"
       alt="main image"
-      class="w-full md:h-[400px] object-cover"
+      class="w-full h-[326px] md:h-[400px] object-cover"
     />
   </div>
 </template>
