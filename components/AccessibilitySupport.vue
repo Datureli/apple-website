@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pb-5">
     <h1
       class="text-4xl md:text-4xl lg:text-6xl mt-8 font-sans font-sf-pro-display text-little-black text-center font-semibold mb-4 p-5"
     >

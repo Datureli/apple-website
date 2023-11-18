@@ -1,7 +1,9 @@
 <template>
-  <section class="bg-black grid grid-cols-1" style="height: 100vh">
-    <div class="bg-red grid grid-cols-3 text-white">
-      <i class="fas fa-thin fa-magnifying-glass left-3 mt-2 ml-2 text-gray-500"></i>
+  <section class="bg-black grid-cols-1" style="height: 100vh">
+    <div class="bg-red grid grid-cols-3 text-white mb-10 pt-3 ml-2">
+      <i
+        class="fas fa-thin fa-magnifying-glass left-3 mt-2 ml-2 text-gray-500"
+      ></i>
       <p>Support</p>
       <p>Accessibility</p>
     </div>
@@ -9,13 +11,20 @@
     <div
       v-for="(dropdown, index) in dropdowns"
       :key="index"
-      class="relative inline-block"
+      class="relative w-[90%] border-t border-b h-[40px] pt-1 ml-4"
+      @click="toggleDropdown(index)"
     >
-      <span class="text-white cursor-pointer" @click="toggleDropdown(index)">
+      <span class="text-white cursor-pointer">
         {{ dropdown.mainTitle }}
       </span>
-
-      <div v-if="dropdown.showLinks === true" class="mt-2 bg-white text-black shadow-lg">
+      <i
+        class="fas fa-thin fa-plus absolute right-0 top-1/2 transform -translate-y-1/2 text-gray-500"
+      ></i>
+      <div
+        v-if="getShowLinks(index)"
+        class="mt-2 bg-white text-black shadow-lg"
+        :style="{ marginTop: openDropdown === index ? 0 : '2rem' }"
+      >
         <nuxt-link
           v-for="(link, linkIndex) in dropdown.dropdownLinks"
           :key="linkIndex"
@@ -28,9 +37,8 @@
     </div>
   </section>
 </template>
-
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const dropdowns = [
   {
@@ -78,6 +86,10 @@ const dropdowns = [
 ];
 
 const toggleDropdown = (index) => {
-  dropdowns[index].showLinks = !dropdowns[index].showLinks;
+  dropdowns[index].showLinks.value = !dropdowns[index].showLinks.value;
+};
+
+const getShowLinks = (index) => {
+  return dropdowns[index].showLinks.value;
 };
 </script>
