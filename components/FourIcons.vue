@@ -4,7 +4,7 @@
       <img :src="imageSrc" :alt="imageAlt" class="w-[60px] h-[60px] mb-2" />
       <div class="flex items-center justify-center">
         <span
-          class="whitespace-normal"
+          class="whitespace-normal mt-1"
           :class="[textClasses, isOdd ? ' md:w-[95%] lg:w-auto' : '']"
           >{{ text }}</span
         >
