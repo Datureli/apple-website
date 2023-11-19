@@ -1,8 +1,8 @@
 <template>
-  <section>
+  <section class="mx-auto md:w-[95%] lg:w-[85%]">
     <h2 class="text-3xl mt-7 font-semibold text-center">Resources</h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 ml-7 mr-3 mt-10 md:w-[85%] m-auto ">
+    <div class="grid grid-cols-1 md:grid-cols-2 ml-7 mr-3 mt-10 ">
       <ContentCardItem
         v-for="(item, index) in items"
         :key="index"
@@ -12,9 +12,8 @@
   </section>
 </template>
 
-<script setup>
-import ContentCardItem from "@/components/ContentCardItem.vue";
 
+<script setup>
 const items = [
   {
     imageSrc: "/icons/content-icons/resources.png",

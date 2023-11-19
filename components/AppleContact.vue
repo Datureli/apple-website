@@ -1,17 +1,17 @@
 <template>
-  <section class="text-center pb-[100px]">
+  <section class="mx-auto pb-[100px] md:w-[85%] ml-5  lg:ml-auto">
     <div
-      class="grid grid-cols-1 ml-7 mr-3 md:grid-cols-3 mt-10 md:w-[85%] m-auto"
+      class="text-left m-auto grid grid-cols-1 mr-3 md:grid-cols-2 lg:grid-cols-3 mt-10"
     >
       <ContentCardItem
         v-for="(item, index) in items"
         :key="index"
         :item="item"
       />
-      <h2 class="text-1xl mt-7 text-left pl-15">
-        * Personal Voice is available in English.
-      </h2>
     </div>
+    <h2 class="text-1xl mt-7 text-left md-text-0 lg:pr-7">
+      * Personal Voice is available in English.
+    </h2>
   </section>
 </template>
 

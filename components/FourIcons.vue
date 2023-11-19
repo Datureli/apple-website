@@ -1,21 +1,20 @@
 <template>
-  <router-link :to="link" class="no-underline text-link hover:underline">
-    <div :class="containerClasses">
+  <router-link
+    :to="link"
+    class="no-underline text-link hover:underline mt-5"
+  >
+    <div :class="[containerClasses, 'flex flex-col items-center']">
       <img :src="imageSrc" :alt="imageAlt" class="w-[60px] h-[60px] mb-2" />
-      <div class="flex items-center justify-center">
-        <span
-          class="whitespace-normal mt-1"
-          :class="[textClasses, isOdd ? ' md:w-[95%] lg:w-auto' : '']"
-          >{{ text }}</span
-        >
-      </div>
+
+      <span :class="[textClasses, isOdd ? 'md:w-[95%] lg:w-auto' : '']">{{
+        text
+      }}</span>
     </div>
   </router-link>
 </template>
 
 <script setup>
-import { ref } from "vue";
-import { useRoute } from "vue-router";
+import { ref, watchEffect } from "vue";
 
 const props = defineProps([
   "imageSrc",
