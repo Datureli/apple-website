@@ -1,30 +1,31 @@
+/** @type {import('tailwindcss').Config} */
+
 module.exports = {
-  purge: [
-    "./components/**/*.{vue,js}",
-    "./layouts/**/*.vue",
-    "./pages/**/*.vue",
-    "./plugins/**/*.{js,ts}",
-    "./nuxt.config.{js,ts}",
-    "./app.vue",
-  ],
-  mode: 'jit',  
+  content: ['./src/**/*.{html,js}'],
   theme: {
+    colors: {
+      'blue': '#1fb6ff',
+      'purple': '#7e5bef',
+      'pink': '#ff49db',
+      'orange': '#ff7849',
+      'green': '#13ce66',
+      'yellow': '#ffc82c',
+      'gray-dark': '#273444',
+      'gray': '#8492a6',
+      'gray-light': '#d3dce6',
+    },
+    fontFamily: {
+      sans: ['Graphik', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
+    },
     extend: {
-      colors: {
-        's2condPurple': '#a32eff',
-        'little-black': '#1d1d1f',
-        'link': '#0066CC',
-        'soft-grey': '#515154',
+      spacing: {
+        '8xl': '96rem',
+        '9xl': '128rem',
       },
-    },
+      borderRadius: {
+        '4xl': '2rem',
+      }
+    }
   },
-  safelist: [
-    {
-      pattern:
-        /(bg|text|border)-(text-link|text-little-black)/,
-    },
-  ],
-  plugins: [
-    require('@fortawesome/fontawesome-free/css/all.min.css'),
-  ],
-} 
+}

@@ -1,5 +1,5 @@
 <template>
-  <section class="text-center pb-5 m-auto md:w-[80%]">
+  <section class="text-center pl-3   pb-5 m-auto md:w-[80%] lg:w-[90%]">
     <h2 class="text-3xl mt-4 font-semibold mb-12 text-little-black">
       Search for more topic
     </h2>

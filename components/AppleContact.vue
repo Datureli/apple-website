@@ -1,7 +1,7 @@
 <template>
-  <section class="mx-auto pb-[100px] md:w-[85%] ml-5  lg:ml-auto">
+  <section class="m-auto pb-[100px] lg:w-[75%] ml-5 lg:ml-auto">
     <div
-      class="text-left m-auto grid grid-cols-1 mr-3 md:grid-cols-2 lg:grid-cols-3 mt-10"
+      class="m-auto grid grid-cols-1 mr-3 md:grid-cols-2 lg:grid-cols-3 mt-10 space-x-6"
     >
       <ContentCardItem
         v-for="(item, index) in items"
@@ -9,40 +9,21 @@
         :item="item"
       />
     </div>
-    <h2 class="text-1xl mt-7 text-left md-text-0 lg:pr-7">
+    <h2 class="text-1xl mt-7 text-left md-text-0 lg:pr-7 custom-title">
       * Personal Voice is available in English.
     </h2>
   </section>
 </template>
 
 <script setup>
-const items = [
-  {
-    imageSrc: "/icons/apple-contact/message.png",
-    title: "Apple Communities",
-    description:
-      "Find answers, ask questions and connect with other Apple users.",
-    linkTitle: "Ask or search now",
-  },
-  {
-    imageSrc: "/icons/apple-contact/users.png",
-    title: "Get Support",
-    description: "We can help you find the best support options.",
-    linkTitle: "Start now",
-  },
-  {
-    imageSrc: "/icons/apple-contact/apple.png",
-    title: "Support app",
-    description:
-      "Get personalised access to solutions for your Apple products.",
-    link: "/path/to/personal-voice",
-    linkTitle: "Download the Apple Support app",
-  },
-];
+const { items } = useAppleContactData();
 </script>
 
 <style scoped>
 .custom-text-title {
   font-size: 17px;
+}
+.custom-title {
+  font-size: 12px;
 }
 </style>
